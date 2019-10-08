@@ -9,11 +9,11 @@
 
 |                     |                   |
 |---------------------|-------------------|
-|Project Title:       | xxxxxx            |
-|Student 1 Name:      | xxxxxx            |
-|Student 1 ID:        | xxxxxx            |
-|Student 2 Name:      | xxxxxx            |
-|Student 2 ID:        | xxxxxx            |
+|Project Title:       | Online Jukebox    |
+|Student 1 Name:      | Jack O'Reilly     |
+|Student 1 ID:        | 16406312          |
+|Student 2 Name:      | John Thornes      |
+|Student 2 ID:        | 16433976          |
 |Project Supervisor:  | xxxxxx            |
 
 > Ensure that the Supervisor formally agrees to supervise your project; this is only recognised once the
@@ -33,23 +33,23 @@
 
 ### Introduction
 
-> Describe the general area covered by the project.
+Our proposed project is to develop an entertainment system which members of the public can interact with to listen to music of their choice in any venue with the system installed.
 
 ### Outline
 
-> Outline the proposed project.
+Our proposed project is an online jukebox system. The system will be composed of a mobile app/webapp which the users select their music from, a client system in the venue which will be responsible for recieving the incoming requests, queing them appropriatly and playing the correct songs, and finally an analytics site which will allow users to see trends in music consumption based on location.
 
 ### Background
 
-> Where did the ideas come from?
+Being on a night out and being annoyed about having to find change for the jukebox. Why can't I just go on my phone, select songs from a library and pay online.
 
 ### Achievements
 
-> What functions will the project provide? Who will the users be?
+The project aims to provide modernisation to jukeboxes in vemues around the country. We want to remove all friction from the act of playing songs on a jukebox. We also want the data from these jukeboxes to be made available to relevant marketing experts so they can see what music is trending, and where in the country it's trending. The users will be the patrons of the venues, the venue owners and marketing experts.
 
 ### Justification
 
-> Why/when/where/how will it be useful?
+We hope this system will be useful in pubs, nightclubs, function rooms, hotels up and down the country. We also hope the trend data from the systems would be useful to labels when trying to predict the fast moving music market.
 
 ### Programming language(s)
 
