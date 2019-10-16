@@ -9,7 +9,7 @@
 |Student 1 ID:        | 16406312          |
 |Student 2 Name:      | John Thornes      |
 |Student 2 ID:        | 16433976          |
-|Project Supervisor:  | xxxxxx            |
+|Project Supervisor:  | Dr. Donal Fitzpatrick          |
 
 ## SECTION B
 ### Introduction
@@ -66,5 +66,5 @@ Our biggest challenge will be understanding how recommender systems work. We bel
 John will focus on the Collaborative Filtering aspect of our recommender system. He will examine which algorithms we would need to use in order to implement this system. He will also handle the front-end for the individual pages for the venue. John will also handle the queueing system for songs, to make sure songs will have a good chance of being played if there is a large queue of songs.
 
 #### Jack O’Reilly
-Jack will focus on Content Filtering for the recommender system. He will also work on front-end aspects of the web app including music display, login display, home screen and searching. Jack will also work on the music rating system and map functionality.
+Jack will focus on Content Filtering for the recommender system. He will also work on front-end aspects of the web app including music display, login display, home screen and searching. Jack will also work on the music rating system and map functionality. He will also work on the venue side system.
 
