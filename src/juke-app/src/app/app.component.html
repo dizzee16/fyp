@@ -37,6 +37,13 @@
   </a>
 </div>
 
+<nav *ngIf="currentUser">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav>
+
 <div class="content" role="main">
 
   <!-- Highlight Card -->
@@ -46,6 +53,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 offset-sm-3">
+                <alert></alert>>
                 <router-outlet></router-outlet>
             </div>
         </div>

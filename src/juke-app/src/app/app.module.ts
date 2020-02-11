@@ -9,6 +9,7 @@ import { VenueComponent } from './venue/venue.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register';
 import { fakeBackendProvider, JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { AlertComponent } from './_components';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { fakeBackendProvider, JwtInterceptor, ErrorInterceptor } from './_helper
     VenueComponent,
     LoginComponent,
     RegisterComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
