@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register';
 import { fakeBackendProvider, JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AlertComponent } from './_components';
+import { HomeUserComponent } from './home-user/home-user.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AlertComponent } from './_components';
     VenueComponent,
     LoginComponent,
     RegisterComponent,
-    AlertComponent
+    AlertComponent,
+    HomeUserComponent
   ],
   imports: [
     BrowserModule,
