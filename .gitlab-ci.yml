@@ -19,7 +19,3 @@ build:
   paths:
 
    - dist/
-
- tags:
-
-  - docker
