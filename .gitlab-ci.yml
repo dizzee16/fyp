@@ -1,6 +1,6 @@
-build:
+image: node:latest
 
- stages: 
+stages: 
  - build
  - test
 
@@ -10,6 +10,7 @@ build:
  - cd ./src/juke-app/
 
 build:
+stage: build
  script:
   - npm run build
  artifacts:
@@ -18,6 +19,7 @@ build:
    - dist/
 
 test:
+ stage: test
  script:
  - npm run test
  artifacts:
