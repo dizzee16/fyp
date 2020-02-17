@@ -1,21 +1,28 @@
 build:
 
- stage: build
+ stages: 
+ - build
+ - test
 
- image: trion/ng-cli
 
  before_script:
+ - cd ./src/juke-app/
 
-  - npm ci
-
+build:
  script:
-
-  - ng build --prod
-
+  - npm run build
  artifacts:
-
   expire_in: 1 day
-
   paths:
-
    - dist/
+
+test:
+ script:
+ - npm run test
+ artifacts:
+  expire_in: 1 day
+  paths:
+   - dist/
+
+after_script:
+- echo "end CI"
