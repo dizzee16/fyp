@@ -6,6 +6,7 @@ stages:
 
 
 before_script:
+ - pwd
  - cd ./src/juke-app/
 
 build:
