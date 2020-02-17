@@ -1,16 +1,15 @@
 image: node:latest
 
 stages: 
- - build
- - test
+- build
+- test
 
 
- before_script:
- - pwd
+before_script:
  - cd ./src/juke-app/
 
 build:
-stage: build
+ stage: build
  script:
   - npm run build
  artifacts:
