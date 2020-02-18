@@ -7,8 +7,7 @@ stages:
 
 before_script:
  - pwd
- - cd src
- - ls
+ - cd src/juke-app
 
 build:
  stage: build
