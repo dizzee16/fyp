@@ -12,6 +12,7 @@ build:
  stage: build
  script:
   - npm install -g @angular/cli
+  - npm update
   - npm run build
  artifacts:
   expire_in: 1 day
