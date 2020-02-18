@@ -13,7 +13,6 @@ build:
  stage: build
  script:
   - npm install -g @angular/cli
-  - npm install
   - npm run build
  artifacts:
   expire_in: 1 day
@@ -24,7 +23,6 @@ test:
  stage: test
  script:
  - npm install -g @angular/cli
- - npm install
  - npm run test
  artifacts:
   expire_in: 1 day
