@@ -11,8 +11,7 @@ before_script:
 build:
  stage: build
  script:
-  - npm install -g @angular/cli
-  - npm install -g @angular-devkit/build-angular/package.json
+  - npm install
   - npm run build
  artifacts:
   expire_in: 1 day
