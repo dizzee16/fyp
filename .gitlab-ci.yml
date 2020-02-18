@@ -6,6 +6,9 @@ stages:
 
 
 before_script:
+ - cd usr/bin
+ - ls
+ - cd ../../
  - pwd
  - cd src/juke-app
 
