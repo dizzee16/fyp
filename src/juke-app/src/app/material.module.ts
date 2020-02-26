@@ -7,6 +7,7 @@ import {
   MatIconModule,
   MatToolbarModule,
   MatCardModule,
+  MatInputModule,
   MatFormFieldModule
 } from '@angular/material';
 
@@ -18,6 +19,7 @@ const modules = [
   MatToolbarModule,
   MatCardModule,
   MatFormFieldModule,
+  MatInputModule,
   CommonModule
 ];
 
