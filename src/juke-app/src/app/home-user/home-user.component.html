@@ -1,1 +1,25 @@
+
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span>First Row</span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <span>Second Row</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item>Home</button>
+  <button mat-menu-item>Search</button>
+</mat-menu>
+
+<button mat-icon-button [matMenuTriggerFor]="appMenu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+
+
+
+
+
 <p>home-user works!</p>

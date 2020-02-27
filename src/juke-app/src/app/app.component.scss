@@ -26,9 +26,10 @@
   }
 
   .toolbar {
-    height: 60px;
-    margin: -8px;
-    display: flex;
+    height: min;
+    margin: 8px;
+    padding: 8px;
+    display: inline-block;
     align-items: center;
     background-color: #1976d2;
     color: white;
@@ -127,6 +128,53 @@
 
   .card.card.highlight-card span {
     margin-left: 60px;
+  }
+
+  .container {
+    .main-toolbar {
+      .spacer {
+        flex: 1 1 auto;
+      }
+      .toolbar-btn {
+        font-size: 16px;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+    }
+
+    .content {
+      .logo {
+        margin: 2.5rem;
+        text-align: center;
+        font-size: 24px;
+        color: #3f51b5;
+        .mat-icon {
+          height: 160px !important;
+          width: 160px !important;
+          font-size: 160px !important;
+        }
+      }
+    }
+
+    .media-footer {
+      bottom: 0;
+      width: 100%;
+      .time-slider {
+        width: 100% !important;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .media-action-bar {
+        width: 100%;
+        padding: 2.5rem;
+        justify-content: center;
+        .mat-icon {
+          height: 48px !important;
+          width: 48px !important;
+          font-size: 48px !important;
+        }
+      }
+    }
   }
 
   svg#rocket {
@@ -252,4 +300,16 @@
     left: -230px;
     z-index: -10;
     width: 1920px;
+  }
+  .searchbar {
+    float: right;
+    padding: 8px;
+    margin: 8px;
+  }
+
+  .navbar-nav {
+    display: inline-block;
+    padding-right: 20px;
+    margin: 30px;
+
   }
