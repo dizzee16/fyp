@@ -8,30 +8,25 @@
         <a class="nav-item nav-link" (click)="logout()">Logout</a>
     </div>
   </nav>
+  <div style="margin-left: 400px;">
+    <span>{{currentUser.venueName}}</span>
+  </div>
 </mat-toolbar>
 
 
 <div class="content" role="main">
 
-  <!-- Highlight Card -->
 
 
-  <div class="jumbotron">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 offset-sm-3">
                 <alert></alert>
                 <router-outlet></router-outlet>
-            </div>
         </div>
     </div>
 </div>
-
-  <!-- Links -->
-  <!-- Footer -->
-  <footer>
-  </footer>
-</div>
+<footer>
+</footer>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
