@@ -28,9 +28,9 @@
 
   .content {
     display: flex;
-    margin: 32px auto;
+    margin: 32px;
     padding: 0 16px;
-    max-width: 960px;
+    max-width: 100%;
     flex-direction: column;
     align-items: center;
   }
@@ -109,6 +109,7 @@
 
   .nav-item{
     margin-left: 10px;
+    cursor: pointer;
 
     .nav-link{
       color: #a8e3b8;
