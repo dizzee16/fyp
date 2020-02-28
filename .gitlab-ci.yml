@@ -1,0 +1,18 @@
+image: node:latest
+
+stages: 
+- build
+
+
+before_script:
+ - pwd
+ - cd src/juke-app
+
+build:
+ stage: build
+ script:
+  - npm install
+  - npm run build
+
+after_script:
+- echo "end CI"
