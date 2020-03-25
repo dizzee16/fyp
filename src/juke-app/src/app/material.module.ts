@@ -8,7 +8,8 @@ import {
   MatToolbarModule,
   MatCardModule,
   MatInputModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatSelectModule
 } from '@angular/material';
 
 const modules = [
@@ -20,7 +21,8 @@ const modules = [
   MatCardModule,
   MatFormFieldModule,
   MatInputModule,
-  CommonModule
+  CommonModule,
+  MatSelectModule
 ];
 
 @NgModule({

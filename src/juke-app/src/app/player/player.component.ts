@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { StreamState } from '../_interfaces/stream-state';
 import { AudioService } from '../_services/audio.service';
 import { CloudService } from '../_services/cloud.service';
+import { Song } from '../_interfaces/song';
+import { Subject, PartialObserver, Observer } from 'rxjs';
 
 @Component({
   selector: 'app-player',
@@ -10,16 +12,15 @@ import { CloudService } from '../_services/cloud.service';
 })
 export class PlayerComponent implements OnInit {
 
-  files: Array<any> = [];
+  files: any[] = [];
   state: StreamState;
   currentFile: any = {};
-
   constructor(
     public audioService: AudioService,
     public cloudService: CloudService
   ) {
     cloudService.getFiles().subscribe(files => {
-      this.files = files;
+      this.files.push(files);
     });
 
     this.audioService.getState().subscribe(state => {
@@ -28,6 +29,7 @@ export class PlayerComponent implements OnInit {
    }
 
   ngOnInit() {
+    console.log(this.cloudService.queue.next());
   }
 
   playStream(url) {

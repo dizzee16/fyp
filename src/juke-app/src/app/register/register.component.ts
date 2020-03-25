@@ -4,6 +4,12 @@ import { Router } from '@angular/router';
 import { AuthenticationService, UserService, AlertService } from '../_services';
 import { first } from 'rxjs/operators';
 
+// tslint:disable-next-line: class-name
+interface userType {
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -14,6 +20,10 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   loading = false;
   submitted = false;
+  types: userType[] = [
+    {value: 'customer', viewValue: 'Customer'},
+    {value: 'venue', viewValue: 'Venue'}
+  ];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -33,7 +43,8 @@ export class RegisterComponent implements OnInit {
       lastName: ['', Validators.required],
       username: ['', Validators.required],
       venueName: ['', [Validators.required]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      userType: ['', [Validators.required]]
     });
   }
   get f() {return this.registerForm.controls; }
