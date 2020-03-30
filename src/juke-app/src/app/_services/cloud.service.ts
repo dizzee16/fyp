@@ -34,14 +34,16 @@ constructor(private http: HttpClient) {
   }
 
   postSongs(incoming) {
-    return this.http.post<any>(`${environment.apiUrl}/songs/set`, {incoming})
+    return this.http.post<any>(`${environment.apiUrl}/songs/set`, incoming)
     .pipe(map(songs => {
       localStorage.setItem('songs', JSON.stringify(songs));
+      this.queue.next(songs);
+      return songs;
     }));
   }
 
   getSongs(): Observable<any> {
-    return this.http.get<ResponseSongs>(this.url)
-    .pipe(map(response =>  (console.log(response))));
+    return this.http.get(this.url)
+    .pipe(map(response => this.queue.next(response)));
   }
 }

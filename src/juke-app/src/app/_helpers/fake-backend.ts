@@ -2,30 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
-import {  } from '../assets'; as; incoming;
 
 let users = JSON.parse(localStorage.getItem('users')) || [];
 const songs = JSON.parse(localStorage.getItem('music')) || [];
-const incoming = [{
-  url:
-    // tslint:disable-next-line: max-line-length
-    'https://ia801504.us.archive.org/3/items/EdSheeranPerfectOfficialMusicVideoListenVid.com/Ed_Sheeran_-_Perfect_Official_Music_Video%5BListenVid.com%5D.mp3',
-  songName: 'Perfect',
-  artist: ' Ed Sheeran'
-},
-{
-  url:
-    // tslint:disable-next-line: max-line-length
-    'https://ia801609.us.archive.org/16/items/nusratcollection_20170414_0953/Man%20Atkiya%20Beparwah%20De%20Naal%20Nusrat%20Fateh%20Ali%20Khan.mp3',
-  songName: 'Man Atkeya Beparwah',
-  artist: 'Nusrat Fateh Ali Khan'
-},
-{
-  url:
-    'https://ia801503.us.archive.org/15/items/TheBeatlesPennyLane_201805/The%20Beatles%20-%20Penny%20Lane.mp3',
-  songName: 'Penny Lane',
-  artist: 'The Beatles'
-}];
+
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
@@ -52,7 +32,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 case url.endsWith('/assets/songs.json') && method === 'GET':
                     return getSongs();
                 case url.endsWith('/songs/set') && method === 'POST':
-                      return setSongs(incoming);
+                      return setSongs(body);
                 default:
                     // pass through any requests not handled above
                     return next.handle(request);
@@ -102,8 +82,10 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         return ok();
       }
 
-        function setSongs(incomingSongs) {
+        function setSongs(incoming) {
+          const incomingSongs = incoming;
           localStorage.setItem('songs', JSON.stringify(incomingSongs));
+          return ok();
         }
 
         function getSongs() {

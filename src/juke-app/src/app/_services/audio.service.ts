@@ -10,6 +10,7 @@ import { StreamState } from '../_interfaces/stream-state';
 export class AudioService {
   private stop$ = new Subject();
   private audioObj = new Audio();
+
   audioEvents = [
     'ended',
     'error',
